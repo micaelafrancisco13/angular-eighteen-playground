@@ -1,0 +1,104 @@
+<div class="relative overflow-hidden">
+  <video autoplay class="absolute inset-0 w-full h-full object-cover" loop muted playsinline>
+    <source src="FIN-gradient.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header class="absolute inset-x-0 top-0 z-50">
+    <nav aria-label="Global" class="flex items-center justify-between p-5 lg:px-8">
+      <div class="flex lg:flex-1">
+        <a class="-m-1.5 p-1.5" href="#">
+          <span class="sr-only">Your Company</span>
+          <img alt="Your Company" class="h-5 w-auto"
+               src="Vector.svg">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button (click)="onToggleMobileMenu()"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" type="button">
+          <span class="sr-only">Open main menu</span>
+          <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor"
+               stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a class="text-sm/6 font-semibold text-white" href="#">Product</a>
+        <a class="text-sm/6 font-semibold text-white" href="#">Features</a>
+        <a class="text-sm/6 font-semibold text-white" href="#">Marketplace</a>
+        <a class="text-sm/6 font-semibold text-white" href="#">Company</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a class="mr-5 text-sm/6 font-semibold text-white" href="#">Profile</a>
+        <a class="text-sm/6 font-semibold text-white" href="#">Log in <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" aria-modal="true" role="dialog">
+      <!-- Background backdrop, show/hide based on slide-over state. -->
+      <div class="fixed inset-0 z-50"></div>
+      <div
+        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[var(--drawer-bg)] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+      >
+        <div class="flex items-center justify-between">
+          <a class="-m-1.5 p-1.5" href="#">
+            <span class="sr-only">Your Company</span>
+            <img alt="Your Company" class="h-3 w-auto"
+                 src="Vector.svg">
+          </a>
+          <button (click)="onToggleMobileMenu()" class="-m-2.5 rounded-md p-2.5 text-gray-400" type="button">
+            <span class="sr-only">Close menu</span>
+            <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor"
+                 stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/25">
+            <div class="space-y-2 py-6">
+              <a class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white "
+                 href="#">Product</a>
+              <a class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
+                 href="#">Features</a>
+              <a class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
+                 href="#">Marketplace</a>
+              <a class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
+                 href="#">Company</a>
+            </div>
+            <div class="py-6">
+              <a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white"
+                 href="#">Log
+                in</a>
+              <a class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white"
+                 href="#">Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- first hero -->
+  <div class="relative isolate pt-14">
+    <div class="py-24 sm:py-32 lg:pb-40">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h1 class="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">Finastra FM's Developer
+            Portal</h1>
+          <p class="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">Anim aute id magna aliqua ad ad non
+            deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+               href="#">Get
+              started</a>
+            <a class="text-sm/6 font-semibold text-white" href="#">Learn more <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <img alt="App screenshot" class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24"
+             height="1442" src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png" width="2432">
+      </div>
+    </div>
+  </div>
+</div>
